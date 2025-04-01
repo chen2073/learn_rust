@@ -52,6 +52,7 @@ fn main() {
     println!("{e}");
 
     print_str("abcdefg");
+    // print_str_borrow("nonono"); error
     print_str_borrow(&"what is this".to_owned());
 }
 
