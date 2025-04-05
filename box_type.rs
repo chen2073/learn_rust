@@ -10,6 +10,7 @@ struct Point2 {
 }
 
 pub fn main() {
+  // wrapping in box type moves value from stack to heap
   let box_point = Box::new(Point{x: 32, y:22});
   println!("x: {}, y: {}", box_point.x, box_point.y);
 
