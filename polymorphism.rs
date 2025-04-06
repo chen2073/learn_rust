@@ -28,7 +28,7 @@ impl ChirpSound for Chicken {
   fn chirp_sound(&self) -> String {
     let sound = self.sound();
     let repeated = vec![sound; 3].join(" ");
-    return repeated
+    return repeated;
   }
 }
 
