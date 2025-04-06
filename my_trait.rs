@@ -42,6 +42,7 @@ pub fn main() {
   println!("box obj before: {}", box_obj.get_prop());
   get_obj_prop_box(box_obj);
   // println!("box obj after: {}", box_obj.get_prop()); err out
+  get_obj2_prop(Obj2{});
 }
 
 struct Obj {}
@@ -57,10 +58,28 @@ impl Property for Obj {
   }
 }
 
+trait Property2 {
+  fn get_prop2(&self) -> String;
+}
+
+struct Obj2 {}
+
+impl Property for Obj2 {}
+impl Property2 for Obj2 {
+  fn get_prop2(&self) -> String {
+    return String::from("mass");
+  }
+}
+
 fn get_obj_prop(obj: &impl Property) {
   println!("obj property: {}", obj.get_prop());
 }
 
 fn get_obj_prop_box(obj: Box<dyn Property>) {
   println!("obj property: {}", obj.get_prop())
+}
+
+fn get_obj2_prop<T>(obj: T) where T: Property + Property2 {
+  println!("property: {}", obj.get_prop());
+  println!("property 2: {}", obj.get_prop2());
 }

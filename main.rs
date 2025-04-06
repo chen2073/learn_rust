@@ -5,6 +5,7 @@ mod borrow;
 mod lifetime;
 mod generic;
 mod my_trait;
+mod polymorphism;
 
 fn main() {
     // basics::main();
@@ -13,5 +14,6 @@ fn main() {
     // borrow::main();
     // lifetime::main();
     // generic::main();
-    my_trait::main();
+    // my_trait::main();
+    polymorphism::main();
 }
