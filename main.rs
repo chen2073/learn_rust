@@ -6,6 +6,7 @@ mod lifetime;
 mod generic;
 mod my_trait;
 mod polymorphism;
+mod closure;
 
 fn main() {
     // basics::main();
@@ -15,5 +16,6 @@ fn main() {
     // lifetime::main();
     // generic::main();
     // my_trait::main();
-    polymorphism::main();
+    // polymorphism::main();
+    closure::main();
 }
