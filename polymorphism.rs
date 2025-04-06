@@ -2,7 +2,7 @@ trait Chirp {
   fn chirp(&self) -> String;
 }
 
-trait ChirpSound: Chirp {
+trait ChirpSound {
   fn chirp_sound(&self) -> String;
 }
 
