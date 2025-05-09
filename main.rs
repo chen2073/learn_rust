@@ -7,6 +7,7 @@ mod generic;
 mod my_trait;
 mod polymorphism;
 mod closure;
+mod run_debug;
 
 fn main() {
     // basics::main();
@@ -17,5 +18,6 @@ fn main() {
     // generic::main();
     // my_trait::main();
     // polymorphism::main();
-    closure::main();
+    // closure::main();
+    run_debug::main();
 }
